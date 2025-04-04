@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMemo } from "react";
 
 const useNotes = () => {
 
@@ -6,7 +7,6 @@ const useNotes = () => {
 
     const addNote = (text) => {
         setNotes((prevNotes) => [...prevNotes, { id: Date.now(), text }]);
-        //setNotes([...notes], {id: Date.now(), text})
     };
     
     const deleteNote = (id) => {
@@ -16,8 +16,11 @@ const useNotes = () => {
     const updateNote = (id, newText) => {
         setNotes(notes.map((note) => (note.id === id ? {...note, text: newText} : note)));
     }
+    const noteCounter = useMemo(() => {
+        return notes.length;
+      }, [notes]);
 
-    return {notes, addNote, deleteNote, updateNote};
+    return {notes, addNote, deleteNote, updateNote, noteCounter};
 
 };
 export default useNotes;
