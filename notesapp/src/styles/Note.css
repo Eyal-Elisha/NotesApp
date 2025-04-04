@@ -1,0 +1,48 @@
+.note {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .note-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .buttons{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .delete-btn,
+  .edit-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .edit-btn{
+    background-color: #00bcd4;
+  }
+  .edit-btn:hover{
+    background-color: #0097a7;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff1a1a;
+  }
+  

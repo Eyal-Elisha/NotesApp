@@ -1,0 +1,41 @@
+.note-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-input {
+  width: 99%;
+  margin-top: 3px;
+  height: 30px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.note-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.add-note-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-note-btn:hover {
+  background-color: #0056b3;
+}
