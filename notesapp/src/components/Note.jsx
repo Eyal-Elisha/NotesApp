@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../styles/Note.css";
+
 const Note = ({note, deleteNote, updateNote}) => {
     const [isEditing, setIsEditing] = useState(false);
     const [newText, setNewText] = useState(note.text);
@@ -16,9 +18,11 @@ const Note = ({note, deleteNote, updateNote}) => {
                 </div>
             ) : (
                 <div>
-                    <p>{note.text}</p>
-                    <button onClick={() => setIsEditing(true)}>Edit</button>
-                    <button onClick={() => deleteNote(note.id)}>Delete</button>
+                    <p className="note-text">{note.text}</p>
+                    <div className="buttons">
+                        <button className="edit-btn" onClick={() => setIsEditing(true)}>Edit</button>
+                        <button className="delete-btn" onClick={() => deleteNote(note.id)}>Delete</button>
+                    </div>
                 </div>
             )}
 

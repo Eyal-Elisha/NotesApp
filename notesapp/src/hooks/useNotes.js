@@ -5,7 +5,6 @@ const useNotes = () => {
     const [notes, setNotes] = useState([])
 
     const addNote = (text) => {
-        console.log(notes)
         setNotes((prevNotes) => [...prevNotes, { id: Date.now(), text }]);
         //setNotes([...notes], {id: Date.now(), text})
     };
