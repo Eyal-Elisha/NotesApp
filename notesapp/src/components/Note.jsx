@@ -3,10 +3,10 @@ import "../styles/Note.css";
 
 const Note = ({note, deleteNote, updateNote}) => {
     const [isEditing, setIsEditing] = useState(false);
-    const [newText, setNewText] = useState(note.text);
+    const [newText, setNewText] = useState(note.content);
 
     const handleUpdate = () => {
-      updateNote(note.id, newText)
+      updateNote(note._id, newText)
       setIsEditing(false);  
     };
     return(
@@ -18,10 +18,10 @@ const Note = ({note, deleteNote, updateNote}) => {
                 </div>
             ) : (
                 <div>
-                    <p className="note-text">{note.text}</p>
+                    <p className="note-text">{note.content}</p>
                     <div className="buttons">
                         <button className="edit-btn" onClick={() => setIsEditing(true)}>Edit</button>
-                        <button className="delete-btn" onClick={() => deleteNote(note.id)}>Delete</button>
+                        <button className="delete-btn" onClick={() => deleteNote(note._id)}>Delete</button>
                     </div>
                 </div>
             )}
