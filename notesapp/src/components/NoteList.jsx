@@ -6,7 +6,7 @@ const NoteList = ({ notes, deleteNote, updateNote }) => {
   return (
     <div>
       {notes.map((note) => (
-        <Note key={note.id} note={note} deleteNote={deleteNote} updateNote={updateNote} />
+        <Note key={note._id} note={note} deleteNote={deleteNote} updateNote={updateNote} />
       ))}
     </div>
   );
