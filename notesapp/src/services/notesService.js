@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// const PORT = process.env.SERVER_PORT
+const PORT = process.env.SERVER_PORT
 
-const API_URL = `http://localhost:5000/notes`;
+const API_URL = `http://localhost:${PORT}/notes`;
 
 export const getNotes = () => axios.get(API_URL);
 
